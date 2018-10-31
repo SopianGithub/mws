@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Yayan Sopian</title>
+		<link rel="icon" href="images/icon-mymws.png" sizes="32x32">
+     	<meta name="mobile-web-app-capable" content="yes">
+		<link rel="manifest" href="manifest.json">
+		<style type="text/css">
+			.container {
+				 display: grid;
+				 width: 100%;
+				 grid-template-columns: repeat(4, 1fr);
+				 grid-template-rows: 30px 100px 100px 100px 30px;
+				 grid-gap: 4px;
+				 background-color: #000080;
+			}
+			.menu {
+				 background: #42b549;
+				 grid-column-start: 1;
+				 grid-column-end: 5;
+			 }
+			 .sidebar {
+				 background: lightyellow;
+				 grid-row-start: 2;
+				 grid-row-end: 5;
+				 grid-column-end: 1/2;
+				 background-color: #4eaae1;
+			 }
+			 .konten {
+				 background: #d9f20f;
+				 grid-column: 2/5;
+			 }
+			 .footer {
+				 background: #42b549;
+				 grid-column: 1/5;
+				 grid-row : 5/5;
+				 text-align: center;
+			 }
+			 .my-img-apps {
+			 	display: block;
+				margin-left: auto;
+    			margin-right: auto;
+    			margin-top: 7%;
+    			width: 60%;
+    			height: 250px;
+				border-radius: 50%;
+		    	border-color: #ff9b03;
+				align-self: center;
+			}
+			.img-menu {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 1%;
+				border-color: #ff9b03;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		 <div class='menu'>
+		 	<i class="fas fa-home">Menu</i>
+		 </div>
+		 <div class='sidebar'>
+		 	<img src="images/my-foto.jpg" class="my-img-apps" alt="My Foto">
+		 </div>
+		 <div class='konten'>
+		 	<a href="https://y2nmws-ec474.firebaseapp.com/project1" title="Calculator">
+		 		<img src="project1/images/calculator.ico" alt="CalIcon" class="img-menu" width="80px" height="80px" />
+		 	</a>
+		 </div>
+		 <div class='konten'>
+	 		<a href="https://y2nmws-ec474.firebaseapp.com/project2" title="MAPBOX">
+	 			<img src="project2/images/icon-maps.png" alt="MapsIcon" class="img-menu" width="80px" height="80px" />
+	 		</a>
+		 </div>
+		 <div class='konten'>
+		 	<a href="https://y2nmws-ec474.firebaseapp.com/projfetch" title="Fetch JSON">
+	 			<img src="images/json.png" alt="CssIcon" class="img-menu" width="80px" height="80px" />
+	 		</a>
+		 </div>
+		 <div class='footer'>Yayan Sopian</div>
+	    </div>
+
+	    <script type="text/javascript" src="assets/js/index.js"></script>
+	</body>
+</html> 

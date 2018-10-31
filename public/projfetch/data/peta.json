@@ -1,0 +1,22 @@
+{
+ "places":[
+			 {
+				 "lokasi": [-7.103105, 108.200384],
+				 "sponsor" : "Taman Wisata Pasir Krisik",
+				 "gambar": "images/pasir_krisik.jpg",
+				 "review": "Wisata Alam Pasir Kirisik merupakan salah satu wisata alam yang sedang hits di Kabupaten Tasikmalaya. Lokasinya berada di Pagerageung"
+			 },
+			 {
+				 "lokasi": [-7.311228, 108.240227],
+				 "sponsor" : "Taman Wisata Karang Resik",
+				 "gambar":"images/karang-resik-tasik.jpg",
+				 "review": "Taman wisata karang resik adalah sebuah taman kota yang kini menjadi sebuah objek wisata dan berada di Tasikmalaya Jawa Barat"
+			 },
+			 {
+				 "lokasi": [-7.337608, 108.189514],
+				 "sponsor" : "Objek Wisata Situ Gede",
+				 "gambar":"images/situ-gede.jpg",
+				 "review": "Situ gede Tasikmalaya sejarah tragedi wisata terbaru asal usul lokasi"
+			 }
+		]
+}

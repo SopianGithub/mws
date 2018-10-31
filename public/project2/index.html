@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#ff6600" />
+	<title>MAPBOX</title>
+	<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
+	<link rel="manifest" href="../manifest.json">
+	<style>
+		#mapid { height: 20em; }
+	</style>
+
+</head>
+<body>
+	<a href="https://y2nmws-ec474.firebaseapp.com/" >Back To Home</a>
+	<div id="mapid"></div>
+
+	<script type="text/javascript" src="leaflet/leaflet.js"></script>
+	<script type="text/javascript">
+		var mymap = L.map('mapid').setView([-6.182265, 106.830172], 13);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
+					{
+					 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+					  maxZoom: 18,
+					  id: 'mapbox.streets',
+					 accessToken: 'sk.eyJ1IjoicnN1cmVnYXIiLCJhIjoiY2psdnp5MDRuMDd6YTNrcXN0Ym84ODBiZSJ9.WG19xwZy_L3HIU8eboaXXw'
+		}).addTo(mymap);
+
+		var marker = L.marker([-6.182265, 106.830172]).addTo(mymap);
+
+		var circle = L.circle([-6.182265, 106.830172], {
+			color: 'yellow',
+			fillColor: '#f03',
+			fillOpacity: 0.5,
+			radius: 100
+		}).addTo(mymap);
+
+		marker.bindPopup("<b>My Location</b><br>").openPopup();
+		circle.bindPopup("Masih Radius Lokasi dari My Location");
+
+		var popup = L.popup();
+		function onMapClick(e) {
+		popup
+		.setLatLng(e.latlng)
+		.setContent("Lokasi yang dipilih: " + e.latlng.toString())
+		.openOn(mymap);
+		}
+		mymap.on('click', onMapClick);
+
+	</script>
+	<script type="text/javascript" src="../assets/js/index.js"></script>
+</body>
+</html>
